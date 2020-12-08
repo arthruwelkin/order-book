@@ -1,0 +1,14 @@
+@import "../abstracts/variables", "../abstracts/mixins"
+
+.not-found-layout
+  max-width: 768px
+  margin: 0 auto
+  padding: 32px 0
+  text-align: center
+
+  &__title
+    color: #fff
+
+  &__link-button
+    margin: 24px auto 0
+    @include link-button($green-color)

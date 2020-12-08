@@ -1,0 +1,33 @@
+@import "../../../styles/abstracts/variables"
+
+.order-book-divider
+  display: grid
+  grid-template-columns: 30% 37% 33%
+  justify-content: space-between
+  padding: 6px 0
+  background-color: $block-color-400
+
+  &__title
+    color: rgba(255, 255, 255, 0.5)
+    margin-bottom: 2px
+
+  &__value
+    color: rgb(255, 255, 255)
+
+  &__title,
+  &__value
+    font-size: 13px
+
+  &__col
+    &_price
+      padding-left: 10px
+
+    &_currency
+      text-align: right
+      padding-right: 4px
+
+    &_change
+      display: flex
+      flex-direction: column
+      align-items: flex-end
+      padding-right: 10px

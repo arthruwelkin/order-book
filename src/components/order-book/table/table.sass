@@ -1,0 +1,125 @@
+@import "../../../styles/abstracts/variables"
+
+.order-book-row
+  display: flex
+  width: 100%
+  height: 25px
+  cursor: pointer
+  background-color: $block-color-300
+
+  &__text
+    position: absolute
+    right: 10px
+
+  &__cell
+    display: inline-flex
+    align-items: center
+    font-size: 13px
+
+    &_decimals
+      width: 30%
+      padding-left: 10px
+      justify-content: flex-start
+
+    &_amount
+      width: 37%
+      padding-right: 4px
+
+    &_total
+      width: 33%
+      position: relative
+
+    &_amount,
+    &_total
+      justify-content: flex-end
+      color: rgba(255, 255, 255, .75)
+
+  &:nth-child(even)
+    background-color: $block-color-500
+
+  &:hover
+    background-color: $block-color-200
+
+.order-book-table
+
+  &_asks
+    .order-book-bar
+      background-color: rgba(244, 67, 54, 0.3)
+
+    .order-book-row__cell_decimals
+      color: $red-color
+
+  &_bids
+
+    .order-book-row
+      background-color: $block-color-500
+
+      &:nth-child(even)
+        background-color: $block-color-400
+
+    &.order-book-table_full-height .order-book-row
+      background-color: $block-color-400
+      &:nth-child(even)
+        background-color: $block-color-500
+
+    .order-book-bar
+      background-color: rgba(76, 175, 80, 0.3)
+
+    .order-book-row__cell_decimals
+      color: $green-color
+
+  &_hidden
+    display: none
+
+  &_full-height &__list
+    max-height: 400px
+
+  &__header
+    display: flex
+    flex-shrink: 0
+    height: 34px
+
+    &-cell
+      font-size: 13px
+      display: flex
+      align-items: center
+      justify-content: flex-end
+      color: rgba(255, 255, 255, .5)
+      white-space: nowrap
+      overflow: hidden
+      background-color: $block-color-500
+
+      &:first-child
+        width: 30%
+        justify-content: flex-start
+        padding-left: 10px
+
+      &:nth-child(2)
+        width: 37%
+        padding-right: 4px
+
+      &:last-child
+        width: 33%
+        padding-right: 10px
+
+  &__list
+    max-height: 200px
+    overflow: hidden auto
+
+    &::-webkit-scrollbar
+      width: 3px
+
+    &::-webkit-scrollbar-track
+      background-color: transparent
+
+    &::-webkit-scrollbar-thumb
+      background-color: $blue-color
+
+.order-book-bar
+  position: absolute
+  left: 0
+  top: 0
+  width: 100%
+  height: 100%
+  transform: translateX(100%)
+  transition: transform 0.4s linear

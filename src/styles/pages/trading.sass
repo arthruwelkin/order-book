@@ -1,0 +1,39 @@
+@import "../abstracts/variables", "../abstracts/mixins"
+
+.trading-layout
+  @include primary-layout
+
+  &_invalid-token
+    text-align: center
+
+    h1
+      color: #fff
+
+    a
+      @include link-button($red-color)
+      margin: 24px auto 0
+
+.page-header
+  display: flex
+  align-items: center
+
+  &-part
+    display: inherit
+    &:last-child
+      margin-left: 16px
+
+  &__logo
+    width: 40px
+    height: 40px
+    margin-right: 8px
+
+  &__market
+    color: #fff
+    text-transform: capitalize
+
+  &__pair
+    color: $blue-color
+    font-size: 14px
+
+.page-content
+  margin-top: 24px

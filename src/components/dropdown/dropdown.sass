@@ -1,0 +1,33 @@
+@import "../../styles/abstracts/variables"
+
+.dropdown-button
+  padding: 0
+  color: #fff
+  min-width: initial
+
+  &:hover
+    background-color: transparent
+
+  svg
+    transform: scale(0.8)
+    fill: rgba(255, 255, 255, 0.5)
+
+  &_opened svg
+    transform: scale(0.8) rotate(180deg)
+
+.dropdown-menu
+  min-width: 80px
+  background-color: $block-color-500
+  border-radius: 0
+
+  ul
+    padding: 0
+
+  &__item
+    color: #fff
+    font-size: 14px
+
+    &:hover,
+    &_selected
+      color: $blue-color
+      background-color: transparent !important

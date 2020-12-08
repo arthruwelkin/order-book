@@ -1,0 +1,40 @@
+@import "../../styles/abstracts/variables"
+
+.order-book
+  max-width: 290px
+
+  &__header
+    display: flex
+    justify-content: space-between
+    align-items: center
+    height: 45px
+    border-bottom: 1px solid $border-color
+    background-color: $block-color-400
+
+    &-controls
+      display: flex
+      align-items: center
+      height: 100%
+
+  &__view-buttons
+    height: inherit
+    display: flex
+    align-items: center
+    padding: 9px 5px
+    margin-left: 5px
+    border-left: 1px solid $border-color
+
+  &__view-button
+    font-size: 0
+    user-select: none
+
+  &__view-icon
+      transform: scale(0.5)
+
+  &__title
+    padding-left: 10px
+    font-size: 14px
+    color: #fff
+
+  &__content
+    background-color: $block-color-500

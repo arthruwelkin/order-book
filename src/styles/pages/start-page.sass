@@ -1,0 +1,29 @@
+@import "../abstracts/variables", "../abstracts/mixins"
+
+.start-page-layout
+  @include primary-layout
+
+  &__form
+    display: flex
+    flex-direction: column
+    justify-content: flex-end
+    margin-top: 16px
+
+    .access-token-field
+      width: 100%
+      min-height: 200px
+      padding: 16px
+      border-radius: $border-radius
+
+    .enter-link-button
+      margin-top: 16px
+      margin-left: auto
+      min-width: 100px
+      @include link-button($blue-color)
+
+  .introductory-steps
+    color: #fff
+    line-height: 1.5
+
+    a
+      color: $blue-color

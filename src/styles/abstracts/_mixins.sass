@@ -1,0 +1,18 @@
+@import "variables"
+
+@mixin primary-layout
+  max-width: 768px
+  margin: 0 auto
+  padding: 32px 0
+
+@mixin link-button($color)
+  text-align: center
+  display: block
+  max-width: 200px
+  padding: 16px
+  background-color: $color
+  color: #fff
+  font-weight: 700
+  border-radius: $border-radius
+  &:hover
+    background-color: lighten($color, 10%)
