@@ -11,7 +11,6 @@ const sortByDecimal = (arr, index, isMoreHyphen, isHyphensFromTop) => {
     const cols = isMoreHyphen ? 16 : 8
     const res = Object.values(
       arr.reduce((acc, { price, amount, decimals, ...rest }) =>
-        // eslint-disable-next-line no-use-before-define
         ((acc[decimals[index]] = acc[decimals[index]] || {
           price,
           amount: 0,
